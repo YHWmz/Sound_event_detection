@@ -43,5 +43,5 @@ python evaluate.py --prediction ./experiments/CDur/best_result/predictions.csv\
                    --output result.txt
 ```
 
-注 ：即便是固定了所有随机种子，代码运行还是会存在一定随机性，F score上可能会有±0.1的波动。
+注 ：即便是固定了所有随机种子，代码运行还是会存在一定随机性，F score可能会有±0.1左右的波动。
 
