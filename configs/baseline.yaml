@@ -1,0 +1,29 @@
+data:
+    feature: data/dev/feature.csv
+    label: data/dev/label.csv
+    class_indice_file: data/metadata/class_label_indices.txt
+    stratified: True
+    specaug: False
+    mix: False
+    timeshift: False
+    freshift: True
+    freaug: False
+dataloader_args:
+    batch_size: 64
+    num_workers: 1
+
+optimizer:
+    type: AdamW
+    args:
+        lr: 0.001
+
+sct: True
+
+epochs: 500
+model:
+    type: CDur
+    args: {}
+    dropout: 0.0
+
+postprocessing: triple
+outputpath: experiments/

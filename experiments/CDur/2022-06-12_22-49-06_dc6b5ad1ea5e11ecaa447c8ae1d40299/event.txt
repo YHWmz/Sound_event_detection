@@ -1,0 +1,48 @@
+Event based metrics (onset-offset)
+========================================
+  Evaluated length                  : 7543.56 sec
+  Evaluated files                   : 834 
+  Evaluate onset                    : True 
+  Evaluate offset                   : True 
+  T collar                          : 200.00 ms
+  Offset (length)                   : 20.00 %
+
+  Overall metrics (micro-average)
+  ======================================
+  F-measure
+    F-measure (F1)                  : 42.36 %
+    Precision                       : 49.57 %
+    Recall                          : 36.97 %
+  Error rate
+    Error rate (ER)                 : 0.99 
+    Substitution rate               : 0.02 
+    Deletion rate                   : 0.61 
+    Insertion rate                  : 0.36 
+
+  Class-wise average metrics (macro-average)
+  ======================================
+  F-measure
+    F-measure (F1)                  : 37.24 %
+    Precision                       : 40.49 %
+    Recall                          : 36.85 %
+  Error rate
+    Error rate (ER)                 : 1.17 
+    Deletion rate                   : 0.63 
+    Insertion rate                  : 0.54 
+  
+
+  Class-wise metrics
+  ======================================
+    Event label  | Nref    Nsys  | F        Pre      Rec    | ER       Del      Ins    |
+    ------------ | -----   ----- | ------   ------   ------ | ------   ------   ------ |
+    Dog          | 450     286   | 24.2%    31.1%    19.8%  | 1.24     0.80     0.44   |
+    Alarm_bell.. | 306     244   | 48.0%    54.1%    43.1%  | 0.93     0.57     0.37   |
+    Cat          | 243     84    | 3.1%     6.0%     2.1%   | 1.30     0.98     0.33   |
+    Vacuum_cle.. | 56      42    | 59.2%    69.0%    51.8%  | 0.71     0.48     0.23   |
+    Speech       | 1401    1160  | 55.3%    61.0%    50.5%  | 0.82     0.49     0.32   |
+    Electric_s.. | 37      70    | 37.4%    28.6%    54.1%  | 1.81     0.46     1.35   |
+    Running_wa.. | 154     126   | 30.7%    34.1%    27.9%  | 1.26     0.72     0.54   |
+    Dishes       | 370     174   | 27.2%    42.5%    20.0%  | 1.07     0.80     0.27   |
+    Frying       | 67      76    | 46.2%    43.4%    49.3%  | 1.15     0.51     0.64   |
+    Blender      | 56      80    | 41.2%    35.0%    50.0%  | 1.43     0.50     0.93   |
+

@@ -1,0 +1,89 @@
+[2022-06-12 20:27:10] Storing files in experiments/CDur/2022-06-12_20-27-06_fb43cd34ea4a11eca8ec7c8ae1d40299
+[2022-06-12 20:27:10] data:
+[2022-06-12 20:27:10]   class_indice_file: data/metadata/class_label_indices.txt
+[2022-06-12 20:27:10]   feature: data/dev/feature.csv
+[2022-06-12 20:27:10]   freaug: false
+[2022-06-12 20:27:10]   freshift: true
+[2022-06-12 20:27:10]   label: data/dev/label.csv
+[2022-06-12 20:27:10]   mix: false
+[2022-06-12 20:27:10]   specaug: false
+[2022-06-12 20:27:10]   stratified: true
+[2022-06-12 20:27:10]   timeshift: false
+[2022-06-12 20:27:10] dataloader_args:
+[2022-06-12 20:27:10]   batch_size: 64
+[2022-06-12 20:27:10]   num_workers: 1
+[2022-06-12 20:27:10] early_stop: 7
+[2022-06-12 20:27:10] epochs: 500
+[2022-06-12 20:27:10] loss: BceLoss
+[2022-06-12 20:27:10] model:
+[2022-06-12 20:27:10]   args: {}
+[2022-06-12 20:27:10]   dropout: 0.0
+[2022-06-12 20:27:10]   type: CDur
+[2022-06-12 20:27:10] num_workers: 2
+[2022-06-12 20:27:10] optimizer:
+[2022-06-12 20:27:10]   args:
+[2022-06-12 20:27:10]     lr: 0.001
+[2022-06-12 20:27:10]   type: AdamW
+[2022-06-12 20:27:10] outputpath: experiments/
+[2022-06-12 20:27:10] postprocessing: triple
+[2022-06-12 20:27:10] scheduler_args:
+[2022-06-12 20:27:10]   factor: 0.1
+[2022-06-12 20:27:10]   patience: 3
+[2022-06-12 20:27:10] sct: true
+[2022-06-12 20:27:10] 
+[2022-06-12 20:27:10] Running on device cuda
+[2022-06-12 20:27:15] AdamW (
+[2022-06-12 20:27:15] Parameter Group 0
+[2022-06-12 20:27:15]     amsgrad: False
+[2022-06-12 20:27:15]     betas: (0.9, 0.999)
+[2022-06-12 20:27:15]     eps: 1e-08
+[2022-06-12 20:27:15]     lr: 0.001
+[2022-06-12 20:27:15]     maximize: False
+[2022-06-12 20:27:15]     weight_decay: 0.01
+[2022-06-12 20:27:15] )
+[2022-06-12 20:27:15] CDur(
+[2022-06-12 20:27:15]   (features): Sequential(
+[2022-06-12 20:27:15]     (0): Block2D(
+[2022-06-12 20:27:15]       (block): Sequential(
+[2022-06-12 20:27:15]         (0): BatchNorm2d(1, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+[2022-06-12 20:27:15]         (1): Conv2d(1, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+[2022-06-12 20:27:15]         (2): LeakyReLU(negative_slope=0.1, inplace=True)
+[2022-06-12 20:27:15]       )
+[2022-06-12 20:27:15]     )
+[2022-06-12 20:27:15]     (1): LPPool2d(norm_type=4, kernel_size=(2, 4), stride=None, ceil_mode=False)
+[2022-06-12 20:27:15]     (2): Block2D(
+[2022-06-12 20:27:15]       (block): Sequential(
+[2022-06-12 20:27:15]         (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+[2022-06-12 20:27:15]         (1): Conv2d(32, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+[2022-06-12 20:27:15]         (2): LeakyReLU(negative_slope=0.1, inplace=True)
+[2022-06-12 20:27:15]       )
+[2022-06-12 20:27:15]     )
+[2022-06-12 20:27:15]     (3): Block2D(
+[2022-06-12 20:27:15]       (block): Sequential(
+[2022-06-12 20:27:15]         (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+[2022-06-12 20:27:15]         (1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+[2022-06-12 20:27:15]         (2): LeakyReLU(negative_slope=0.1, inplace=True)
+[2022-06-12 20:27:15]       )
+[2022-06-12 20:27:15]     )
+[2022-06-12 20:27:15]     (4): LPPool2d(norm_type=4, kernel_size=(2, 4), stride=None, ceil_mode=False)
+[2022-06-12 20:27:15]     (5): Block2D(
+[2022-06-12 20:27:15]       (block): Sequential(
+[2022-06-12 20:27:15]         (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+[2022-06-12 20:27:15]         (1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+[2022-06-12 20:27:15]         (2): LeakyReLU(negative_slope=0.1, inplace=True)
+[2022-06-12 20:27:15]       )
+[2022-06-12 20:27:15]     )
+[2022-06-12 20:27:15]     (6): Block2D(
+[2022-06-12 20:27:15]       (block): Sequential(
+[2022-06-12 20:27:15]         (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+[2022-06-12 20:27:15]         (1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+[2022-06-12 20:27:15]         (2): LeakyReLU(negative_slope=0.1, inplace=True)
+[2022-06-12 20:27:15]       )
+[2022-06-12 20:27:15]     )
+[2022-06-12 20:27:15]     (7): LPPool2d(norm_type=4, kernel_size=(1, 4), stride=None, ceil_mode=False)
+[2022-06-12 20:27:15]     (8): Dropout(p=0.3, inplace=False)
+[2022-06-12 20:27:15]   )
+[2022-06-12 20:27:15]   (gru): GRU(128, 128, batch_first=True, bidirectional=True)
+[2022-06-12 20:27:15]   (temp_pool): LinearSoftPool()
+[2022-06-12 20:27:15]   (outputlayer): Linear(in_features=256, out_features=10, bias=True)
+[2022-06-12 20:27:15] )

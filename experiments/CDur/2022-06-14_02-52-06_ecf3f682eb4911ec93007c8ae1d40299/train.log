@@ -1,0 +1,34 @@
+[2022-06-14 02:52:09] Storing files in experiments/CDur/2022-06-14_02-52-06_ecf3f682eb4911ec93007c8ae1d40299
+[2022-06-14 02:52:09] data:
+[2022-06-14 02:52:09]   class_indice_file: data/metadata/class_label_indices.txt
+[2022-06-14 02:52:09]   feature: data/dev/feature.csv
+[2022-06-14 02:52:09]   freaug: false
+[2022-06-14 02:52:09]   freshift: true
+[2022-06-14 02:52:09]   label: data/dev/label.csv
+[2022-06-14 02:52:09]   mix: false
+[2022-06-14 02:52:09]   specaug: false
+[2022-06-14 02:52:09]   stratified: true
+[2022-06-14 02:52:09]   timeshift: false
+[2022-06-14 02:52:09] dataloader_args:
+[2022-06-14 02:52:09]   batch_size: 64
+[2022-06-14 02:52:09]   num_workers: 1
+[2022-06-14 02:52:09] early_stop: 7
+[2022-06-14 02:52:09] epochs: 500
+[2022-06-14 02:52:09] loss: BceLoss
+[2022-06-14 02:52:09] model:
+[2022-06-14 02:52:09]   args: {}
+[2022-06-14 02:52:09]   dropout: 0.0
+[2022-06-14 02:52:09]   type: CDur
+[2022-06-14 02:52:09] num_workers: 2
+[2022-06-14 02:52:09] optimizer:
+[2022-06-14 02:52:09]   args:
+[2022-06-14 02:52:09]     lr: 0.001
+[2022-06-14 02:52:09]   type: AdamW
+[2022-06-14 02:52:09] outputpath: experiments/
+[2022-06-14 02:52:09] postprocessing: triple
+[2022-06-14 02:52:09] scheduler_args:
+[2022-06-14 02:52:09]   factor: 0.1
+[2022-06-14 02:52:09]   patience: 3
+[2022-06-14 02:52:09] sct: true
+[2022-06-14 02:52:09] 
+[2022-06-14 02:52:09] Running on device cuda
